@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  
+<head>
+  <meta charset = "UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMS</title>
+    
+    
+    <style>
+      *{
+  box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+
+/* Left column */
+.leftcolumn {
+  float: right;
+  width: 70%;
+  height: fit-content;
+  /* background-color: black; */
+  padding: 20px 0 0 0;
+}
+
+/* Timetable */
+.time-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+	background-color: white;
+	border-radius: 20px;
+	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+	color: #B3B8CD;
+  padding : 10px ;
+	position: relative;
+  bottom: 30px;
+  
+	
+}
+.time-box{
+  width: fit-content;
+	background-color: white;
+	border-radius: 20px;
+	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+	color: #B3B8CD;
+  padding : 5px ;
+}
+.text{
+  font-family:serif;
+  color: #0d172a;
+}
+.heading{
+  width: 20%;
+	/* background-color: beige; */
+	font-family: Arial, Helvetica, sans-serif;
+	color: black;
+  padding : 5px ;
+}
+
+/* END */
+
+
+.thirdrow-container{
+  display: flex;
+  align-items: center;
+  justify-content: justify;
+  width: 100%;
+	background-color: white;
+	border-radius: 20px;
+	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+	color: #B3B8CD;
+  padding : 20px ;
+	position: relative;
+  bottom: 10px;
+
+}
+/* ANNOUNCEMENTS */
+.ann-container{
+  
+  width: 55%;
+  height: fit-content;
+	background-color: #141e30;
+	border-radius: 20px;
+	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+	color: #B3B8CD;
+  padding : 20px ;
+	position: relative;  
+}
+
+.heading2{
+  width: 100%;
+	/* background-color: beige; */
+	font-family: Arial, Helvetica, sans-serif;
+	color: WHITE;
+ font-size: 1.5vw;
+  position: relative;
+  top: 0;
+}
+
+.text1{
+  font-family:serif;
+  color: white;
+}
+
+/* END */
+
+
+/* TEACHER ON LEAVE */
+.leave-container{
+ 
+  width: 40%;
+  
+	background-color: #0d172a;
+	border-radius: 20px;
+	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+	color: #B3B8CD;
+  padding : 10px ;
+	position: relative;
+  
+  left: 30px;
+  
+}
+
+
+/* END */
+
+/* TOTAL ATTENDENCE  */ 
+#number1{
+	/* background-color: #03BFCB; */
+  font-family: Georgia;
+  width: fit-content;
+  text-align: center;
+	font-size: 1vw;
+	font-weight: bold;
+  color: #0d172a;
+	padding: 0 0 0 5px;
+}
+.box1{
+  display: inline-block;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px 0 0 ;
+  width: fit-content;
+  height: auto;
+  /* background-color: black; */
+  position: relative;
+}
+.outer1{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 11vw;
+  height: 11vw;
+  border-radius: 50%;
+  padding: 6px;
+  box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+  -6px -6px 10px -1px rgba(255,255,255,0.7);
+
+}
+
+.inner1{
+
+  background-color: white;
+  width: 8vw;
+  height: 8vw;
+  border-radius: 50%;
+  box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+  inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+  -0.5px -0.5px 0px rgba(255,255,255,1),
+  0.5px 0.5px 0px rgba(0,0,0,0.15),
+  0px 12px 10px -10px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.a2{
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 1.5vw;
+  stroke-dasharray: 473;
+  stroke-dashoffset: 473;
+  animation: anim 2s linear forwards;
+}
+.a1{
+  /* background-color: #03BFCB; */
+  position: absolute;
+  top: 2px;
+  width: 11vw;
+  height: 11vw;
+
+}
+
+@keyframes anim{
+  100%{
+    stroke-dashoffset: 80;
+  }
+}
+
+/* END */
+
+.att-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+	background-color: white;
+	border-radius: 20px;
+	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+	color: #B3B8CD;
+  padding : 10px ;
+	position: relative;
+  bottom: 30px;
+	
+}
+
+.att1-container {
+  width: fit-content;
+	background-color: white;
+	border-radius: 20px;
+	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+	color: #B3B8CD;
+  padding : 10px;
+	position: relative;
+	
+}
+#number{
+	/* background-color: #03BFCB; */
+  font-family: Arial, Helvetica, sans-serif;
+  width: fit-content;
+  text-align: center;
+	font-size: 0.7vw;
+	font-weight: bold;
+  color: #0d172a;
+	padding: 0 0 0 5px;
+}
+.box{
+  display: inline-block;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  padding: 10px ;
+  width: fit-content;
+  height: auto;
+  /* background-color: white; */
+  position: relative;
+}
+
+.outer{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50%;
+  padding: 6px;
+  box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+  -6px -6px 10px -1px rgba(255,255,255,0.7);
+
+}
+
+.inner{
+
+  background-color: white;
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+  inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+  -0.5px -0.5px 0px rgba(255,255,255,1),
+  0.5px 0.5px 0px rgba(0,0,0,0.15),
+  0px 12px 10px -10px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+circle{
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 0.5vw;
+  stroke-dasharray: 210;
+  stroke-dashoffset: 210;
+  animation: anime 2s linear forwards;
+}
+
+svg{
+  /* background-color: #03BFCB; */
+  position: absolute;
+  top: 10px;
+  width: 5vw;
+  height: 5vw;
+}
+@keyframes anime{
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+
+.b1{
+  fill: none;stroke: url(#GradientColor);stroke-width: 0.5vw;stroke-dasharray: 210;stroke-dashoffset: 210;
+  animation: anim1 2s linear forwards;
+}
+@keyframes anim1{
+  100%{
+    stroke-dashoffset: 12.6;
+  }
+}
+.b2{
+  fill: none;stroke: url(#GradientColor);stroke-width: 0.5vw;stroke-dasharray: 210;stroke-dashoffset: 210;
+  animation: anim2 2s linear forwards;
+}
+@keyframes anim2{
+  100%{
+    stroke-dashoffset: 21;
+  }
+}
+.b3{
+  fill: none;stroke: url(#GradientColor);stroke-width: 0.5vw;stroke-dasharray: 210;stroke-dashoffset: 210;
+  animation: anim3 2s linear forwards;
+}
+@keyframes anim3{
+  100%{
+    stroke-dashoffset: 27.3;
+  }
+}
+.b4{
+  fill: none;stroke: url(#GradientColor);stroke-width: 0.5vw;stroke-dasharray: 210;stroke-dashoffset: 210;
+  animation: anim4 2s linear forwards;
+}
+@keyframes anim4{
+  100%{
+    stroke-dashoffset: 21;
+  }
+}
+.b5{
+  fill: none;stroke: url(#GradientColor);stroke-width: 0.5vw;stroke-dasharray: 210;stroke-dashoffset: 210;
+  animation: anim5 2s linear forwards;
+}
+@keyframes anim5{
+  100%{
+    stroke-dashoffset: 10.1;
+  }
+}
+
+
+
+
+/* Right column */
+
+.rightcolumn {
+  
+  float: left;
+  width: 25%;
+  height: fit-content;
+  /* background-color: black; */
+  padding: 20px 0 0 0 ;
+}
+/* PROFILE CARD */
+
+.pro-container {
+
+  width: 100%;
+	background: linear-gradient(to top, #141e30, #243b55);
+	border-radius: 20px;
+	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+	color: white;
+  padding : 15px 10px 15px 15px;
+	position: relative;
+	
+}
+
+
+/* Profile */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+.card-container {
+  width: 100%;
+	background: linear-gradient(to top, #141e30, #243b55);
+	border-radius: 20px;
+	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+	color: #B3B8CD;
+  padding : 23px 10px 23px 23px;
+	position: relative;
+  bottom: 17px;
+	
+}
+
+.card-container .name {
+  display: inline-block;
+	/* background-color: #03BFCB; */
+	font-family: Montserrat;
+	vertical-align: middle;
+  width: 50%;
+	font-size: 1.2vw;
+	font-weight: bold;
+	padding: 0 0 0 5px;
+	
+
+}
+
+.card-container .round {
+  display: inline-block;
+	border: 1px solid #03BFCB;
+	border-radius: 50%;
+  width: 45%;
+  flex: left;
+	padding: 7px;
+  vertical-align: middle;
+  
+}
+
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+img{
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+/* Style the top navigation bar */
+
+.topnav {
+
+  /* background-color: black; */
+  display: block;
+
+  padding: 40px 100px;
+  width:100%;
+ }
+.button{
+  box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+  border-radius: 1.5rem;
+  background-color: #2e9cca;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 0 20px 0 40px;
+  text-decoration: none;
+  float: right;
+  overflow: hidden;
+  position: relative;
+  bottom: 30px;
+  
+
+}
+
+.margin{
+  margin : 10px;
+  width : fit-content;
+}
+
+
+
+/* Buttons */
+.button-81 {
+  background-color: #fff;
+  border: 0 solid #e2e8f0;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  color: #0d172a;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem 1.6rem;
+  text-align: center;
+  text-decoration: none #0d172a solid;
+  text-decoration-thickness: auto;
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-81:hover {
+  background-color: #1e293b;
+  color: #fff;
+}
+
+@media (min-width: 600px) {
+  .button-81 {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.8rem;
+  }
+}
+
+
+
+
+
+
+    </style>
+</head>
+
+
+<body style="background: #2193b0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+<!-- <body style = "background-color: #97caef;"> -->
+
+<!-- Logo -->
+<div class = "header,img">
+<img src = "https://ums.lpu.in/lpuums/login_images/ums_logo.png">
+</div>
+
+
+  <!-- Change password button -->
+<div class = "topnav">
+<div class = "button">
+<div class = "margin"><a style = "text-decoration: none"  href = "./index(aakash).html" target="_blank"><button class="button-81" role="button">Home</button></a></div>
+<div class = "margin"><a style = "text-decoration: none"  href = "./Class_Timetable.html" target="_blank"><button class="button-81" role="button">TimeTable</button></a></div>
+<div class = "margin"><a style = "text-decoration: none"  href = "./Exam_timetable.html" target="_blank"><button class="button-81" role="button">Examination</button></a></div>
+<div class = "margin"><a style = "text-decoration: none"  href = "./Changepass.html" target="_blank">
+    <button class="button-81" role="button">Change Password</button>
+</a></div>
+<div class = "margin"><a style = "text-decoration: none"  href = "./Login.html" target="_blank">
+  <button class="button-81" role="button">Logout</button></a></div>
+</div>
+</div>
+
+<div class = "row">
+  <div class = "rightcolumn">
+    <div class="card-container">
+	
+      <img class="round" src="https://avatars.githubusercontent.com/u/119072341?s=400&u=b3bc9fc405f8b686a6243020e2377f66f903c831&v=4" alt="user" />
+      <div class="name"><h>Rajiv Nayan</h3></div>
+    
+    </div>
+  </div>
+  <div class="leftcolumn">
+    <div class="att-container">
+
+ 
+    <div class="box1">
+      <div class="outer1">
+        <div class="inner1">
+          <div id="number1">
+            Total attendence 94%
+          </div>
+          
+        </div>
+      </div>
+      <svg class = "a1" xmlns="http://www.w3.org/2000/svg" version="1.1" >
+        <defs>
+           <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="#e91e63" />
+              <stop offset="100%" stop-color="#673ab7" />
+           </linearGradient>
+        </defs>
+        <circle class = "a2" cx="50%" cy="50%" r="4.7vw" stroke-linecap="round" />
+    </svg>
+
+    </div>
+    <div class="att1-container">
+
+    <div class="box">
+      <div class="outer">
+        <div class="inner">
+          <div id="number">
+            CSE111 100%
+          </div>
+          
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" >
+        <defs>
+           <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="#e91e63" />
+              <stop offset="100%" stop-color="#673ab7" />
+           </linearGradient>
+        </defs>
+        <circle  cx="50%" cy="50%" r="2.2vw" stroke-linecap="round" />
+    </svg>
+
+    </div>
+    <div class="box">
+      <div class="outer">
+        <div class="inner">
+          <div id="number">
+            CSE 326 95%
+          </div>
+          
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" >
+        <defs>
+           <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="#e91e63" />
+              <stop offset="100%" stop-color="#673ab7" />
+           </linearGradient>
+        </defs>
+        <circle class = "b5" cx="50%" cy="50%" r="2.2vw" stroke-linecap="round" />
+    </svg>
+
+    </div>
+    <div class="box">
+      <div class="outer">
+        <div class="inner">
+          <div id="number">
+            INT108 94%
+          </div>
+          
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" >
+        <defs>
+           <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="#e91e63" />
+              <stop offset="100%" stop-color="#673ab7" />
+           </linearGradient>
+        </defs>
+        <circle class = "b4" cx="50%" cy="50%" r="2.2vw" stroke-linecap="round" />
+    </svg>
+
+    </div>
+    <div class="box">
+      <div class="outer">
+        <div class="inner">
+          <div id="number">
+            MEC135 87%
+          </div>
+          
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" >
+        <defs>
+           <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="#e91e63" />
+              <stop offset="100%" stop-color="#673ab7" />
+           </linearGradient>
+        </defs>
+        <circle class = "b3" cx="50%" cy="50%" r="2.2vw" stroke-linecap="round" />
+    </svg>
+
+    </div>
+    <div class="box">
+      <div class="outer">
+        <div class="inner">
+          <div id="number">
+            MTH174 90%
+          </div>
+          
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" >
+        <defs>
+           <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="#e91e63" />
+              <stop offset="100%" stop-color="#673ab7" />
+           </linearGradient>
+        </defs>
+        <circle class = "b2"cx="50%" cy="50%" r="2.2vw" stroke-linecap="round" />
+    </svg>
+
+    </div>
+     <div class="box">
+      <div class="outer">
+        <div class="inner">
+          <div id="number">
+            PES318 100%
+          </div>
+          
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" >
+        <defs>
+           <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="#e91e63" />
+              <stop offset="100%" stop-color="#673ab7" />
+           </linearGradient>
+        </defs>
+        <circle cx="50%" cy="50%" r="2.2vw" stroke-linecap="round" />
+    </svg>
+
+    </div>
+
+    <div class="box">
+      <div class="outer">
+        <div class="inner">
+          <div id="number">
+            PHY110 94%
+          </div>
+          
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" >
+        <defs>
+           <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="#e91e63" />
+              <stop offset="100%" stop-color="#673ab7" />
+           </linearGradient>
+        </defs>
+        <circle class = "b1" cx="50%" cy="50%" r="2.2vw" stroke-linecap="round" />
+    </svg>
+
+    </div>
+    
+  </div>
+  </div>
+    </div>
+
+  </div>
+ 
+
+<div class="row">
+  <div class="rightcolumn">
+    <div class="pro-container">
+      <h2>PROFILE DETAILS</h2>
+      <p>Roll no : RKOC02 28(Term:12231)</p>
+      <p>Section : KOC02</p>
+      <p>Group - 1 </p>
+      <p>Programme - P132::B.Tech. (Computer Science & Engineering)
+        View Programme Outcome</p>
+    </div>
+    
+    </div>
+    <div class="leftcolumn">
+      <div class="time-container">
+        <h2 class = "heading">TODAY'S TIMETABLE</h2>
+
+        <div class="time-box">
+          <h3 class="text">11-12 AM</h3>
+          <p class="text">INT108 | R: 25-403</p>
+         
+          <p class="text">Lecture | G:All</p>
+          
+        </div>
+        <div class="time-box">
+          <h3 class="text">12-01 AM</h3>
+          <p class="text">INT108 | R: 25-403</p>
+         
+          <p class="text">Lecture | G:All</p>
+          
+        </div>
+
+        <div class="time-box">
+          <h3 class="text">01-02 PM</h3>
+          <p class="text">CSE111 | R: 34-609</p>
+         
+          <p class="text">Lecture | G:All</p>
+          
+        </div>
+
+        <div class="time-box">
+          <h3 class="text">02-03 PM</h3>
+          <p class="text">PHY110 | R: 33:503</p>
+         
+          <p class="text">Lecture | G:All</p>
+          
+        </div>
+        
+        <div class="time-box">
+          <h3 class="text">04-05 PM</h3>
+          <p class="text">MTH174 | R: 34-402</p>
+         
+          <p class="text">Lecture | G:All</p>
+          
+        </div>
+
+      </div>
+      <div class="thirdrow-container">
+
+      <div class="ann-container" style="overflow-y: scroll; height:300px;">
+       <h3 class="heading2">ANNOUNCEMENTS</h3>
+       <h4 class = "text1"> Registration invited for Value Added Certification Course on Global Bakery and Confectionery. </h4>
+       <p class = "text1">Registration is invited from External Participants, Faculty members, Staff members, Research Scholar and Students for Value Added Certification Course on Global Bakery and Confectionery by the School of Hotel Management and Tourism and Human Resource Development Center, LPU, which will impart knowledge and skill and also make the participants skillful entrepreneurs. The course aims to skill aspirants with the basics and advanced knowledge of the program.<br><br>
+
+ 
+
+        Title 	Value Added Certification Course on Global Bakery and Confectionery 
+        Course Outcome <br>	
+        Participants will be able to:
+        <br>
+        • Acquire knowledge about the basics of Bakery, High-tea snacks, and Confectionery.
+        <br>
+        • Orientation with preparation bakery & Confectionery products used in various parts of the globe.
+        <br>
+        • Understand the role of various commodities used in these products along with the pastry techniques.
+        <br>
+        • Apply the hands-on involvement of the participants in the production for a better understanding. 
+        <br>
+        <br>
+        Resource Person 	Chef Ranit Bhardwaj, Assistant Professor, School of Hotel Management and Tourism, Lovely Professional University <br>
+        Date 	November 17 to November 29, 2022 <br>
+        Time 	02:00 to 05:00 PM <br>
+        Venue 	LPU Campus Block 15B, Room No. 406 <br>
+        Registration Fee 	Rs. 2499/- <br>
+        Registration Link 	https://www.lpu.in/hrd/ <br>
+        Registration Closes 	November 15, 2022  <br>
+        <br>
+        
+        Since there are limited seats, selection will be on first come first served basis.    <br>  
+        <br>
+         
+        
+        Looking forward to your active participation.<br>
+        <br>
+         
+        
+        Uploaded By:
+        Dr. Sunaina Ahuja
+        Human Resource Development Center
+        *This is computer generated notice, not requiring signature</p>
+
+      </div>
+      <div class="leave-container">
+        <h3 class="heading2">
+          TEACHER ON LEAVE
+        </h3>
+        <h4 class="text1">Course Code: INT108</h4>
+        <p class="text1">Teacher Name: Amandeep Kaur</p>
+        <p class="text1">Section: KOC02</p>
+        <p class="text1">Day Span: Full Day</p>
+
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+
+
+
+</html>
